@@ -1,0 +1,11 @@
+
+.slider { overflow-x: scroll; width: 100%; background: #ccc; }
+.slider-inner { width: 0; background: #bbb; overflow: hidden; }
+.slider .person:hover { opacity: 1; }
+.slider .person { cursor: pointer; opacity: .8; }
+
+.person { float: left; margin: 45px 30px 45px 0; }
+.person .avatar { width: 120px; }
+
+.details .avatar { float: left; }
+.details .person { display: none; }
