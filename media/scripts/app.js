@@ -58,6 +58,7 @@
   PersonView = Backbone.View.extend({
     initialize: function() {
       _.bindAll(this);
+      this.model.bind('change:selected', this.selectedChanged)
     },
     
     template: _.template($('.person-template').html()),
@@ -67,9 +68,18 @@
       'click': 'selectPerson'
     },
 
+    selectedChanged: function(model, selected) {
+      if (selected) {
+        this.$el.addClass('selected')
+      } else {
+        this.$el.removeClass('selected')
+      }
+    },
+
     selectPerson: function(e) {
       if ($(e.target).not('a').length) {
         e.preventDefault();
+        this.model.set({'selected': true})
         window.app.set({'person': this.model});
       }
     },
@@ -90,6 +100,7 @@
     
     remove: function(callback) {
       var view = this;
+      this.model.set({'selected': false})
       this.$el.animate({'margin-left': (-1 * $(window).width())}, function(){
         view.$el.remove();
         callback();
