@@ -14,7 +14,7 @@ a { color: rgba(117, 156, 176, 1.0) }
 
 .slider .person {
     opacity: .9;
-    pointer: cursor;
+    cursor: pointer;
     float: left; width: 400px; height: 200px; margin: 40px 40px 40px 0; padding: 20px;
             border-radius: 3px;
        -moz-border-radius: 3px;
