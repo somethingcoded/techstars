@@ -43,6 +43,6 @@ a { color: rgba(117, 156, 176, 1.0) }
     -webkit-border-radius: 3px;
 }
 
-.details { margin-top: 40px; }
+.details { margin-top: 40px; min-height: 500px; }
 .details .avatar { float: left; }
 .details .person { width: 800px; }
