@@ -1,18 +1,4 @@
 (function() {
-  var people = [
-    {name: 'John Johnson'},
-    {name: 'Bobbo Bobson'},
-    {name: 'Patrick Patterson'},
-    {name: 'Peter Peterson'},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {}
-  ];
-  
   App = Backbone.Model.extend({
     initialize: function(options) {
       this.slider = new Slider();
