@@ -112,7 +112,7 @@
     insertPerson: function(person) {
       var personView = new PersonView({model: person});
       var width = this.$inner.width();
-      this.$inner.css('width', width + 380);
+      this.$inner.css('width', width + 480);
       this.$inner.append(personView.render().el);
     },
     

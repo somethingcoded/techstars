@@ -62,11 +62,13 @@
     
 	<script type="text/html" class="person-template">
       <img class="avatar" src="<%= img %>" alt="<%= name %>'s image" />
-      <div class="position"><%= position %></div>
-      <div class="name"><%= name %></div>
-      <div class="contact email"><%= email %></div>
-      <div class="contact twitter"><a href="<%= twitter %>">@<%= twitter.match(/[^\/]*$/)[0] %></a></div>
-      <div class="contact phone"><%= phone %></div>
+      <div class="details">
+        <div class="position"><%= position %></div>
+        <div class="name"><%= name %></div>
+        <div class="contact email"><%= email %></div>
+        <div class="contact twitter"><a href="<%= twitter %>">@<%= twitter.match(/[^\/]*$/)[0] %></a></div>
+        <div class="contact phone"><%= phone %></div>
+      </div>
     </script>
     
 	<script type="text/html" class="person-detail-template">
