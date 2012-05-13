@@ -1,10 +1,20 @@
+.header { height: 100px; padding: 20px; background: transparent url(../images/stripes.png) 0 0 repeat-x; }
+.slider {
+    overflow-x: scroll; width: 100%; background: transparent url(../images/mountain3.png) 0 0 no-repeat;
+            box-shadow: inset 0px 0px 5px rgba(0,0,0,.6);
+       -moz-box-shadow: inset 0px 0px 3px rgba(0,0,0,.6);
+    -webkit-box-shadow: inset 0px 0px 3px rgba(0,0,0,.6);
+}
+.slider-inner { width: 0; overflow: hidden; }
+.slider .person { cursor: pointer;}
 
-.slider { overflow-x: scroll; width: 100%; background: #ccc; }
-.slider-inner { width: 0; background: #bbb; overflow: hidden; }
-.slider .person:hover { opacity: 1; }
-.slider .person { cursor: pointer; opacity: .8; }
+.person {
+    float: left; width: 300px; margin: 45px 30px 45px 0; padding: 20px; background: #fff;
+            border-radius: 3px;
+       -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
 
-.person { float: left; margin: 45px 30px 45px 0; }
+}
 .person .avatar { width: 120px; }
 
 .details .avatar { float: left; }
