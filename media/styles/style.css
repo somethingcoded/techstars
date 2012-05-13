@@ -11,9 +11,10 @@ a { color: rgba(117, 156, 176, 1.0) }
     -webkit-box-shadow: inset 0px 0px 5px rgba(0,0,0,.6);
 }
 .slider-inner { width: 0; overflow: hidden; margin: 0 40px; }
-.slider .person { cursor: pointer;}
 
 .slider .person {
+    opacity: .9;
+    pointer: cursor;
     float: left; width: 400px; height: 200px; margin: 40px 40px 40px 0; padding: 20px;
             border-radius: 3px;
        -moz-border-radius: 3px;
@@ -26,6 +27,8 @@ a { color: rgba(117, 156, 176, 1.0) }
     -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,.3);
 
 }
+
+.slider .person.selected { opacity: 1; }
 .person .avatar { float: left; margin-right: 20px; }
 .person .details { float: left; margin-top: 0; width: 260px; min-height: 0; }
 .person .position { font-size: 11px; color: rgba(0,187,65,.8); text-transform: uppercase; }
