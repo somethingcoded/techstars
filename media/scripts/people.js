@@ -24,7 +24,7 @@ var people = [
     'name': 'Travis Sisti',
     'bio': 'Some bio here',
     'img': 'media/styles/images/travis-small.png',
-    'skills': ['coding', 'architecture', 'UI'],
+    'skills': ['UI Design', 'UX', 'XHTML/CSS', 'JS'],
     'twitter': 'http://twitter.com/joshontheweb',
     'email': 'josh@joshontheweb.com',
     'phone': '(518) 744-6367',

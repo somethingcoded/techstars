@@ -69,6 +69,15 @@
         <div class="contact twitter"><a href="<%= twitter %>">@<%= twitter.match(/[^\/]*$/)[0] %></a></div>
         <div class="contact phone"><%= phone %></div>
       </div>
+      <% if (skills.length) { %>
+      <div class="skills">
+        <ul>
+          <% _.each(skills, function(skill) { %>
+            <li><%= skill %></li>
+          <% }); %>
+        </ul>
+      </div>
+      <% } %>
     </script>
     
 	<script type="text/html" class="person-detail-template">
