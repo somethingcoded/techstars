@@ -1,7 +1,8 @@
 (function() {
   App = Backbone.Model.extend({
     initialize: function(options) {
-      this.slider = new Slider();
+      this.people = new People(_.shuffle(people));
+      this.slider = new Slider({people: this.people});
     }
   });
   
@@ -26,7 +27,7 @@
       this.personView = new PersonDetailView({model: person});
       var $el = this.personView.render().$el;
       $el.css({'margin-left': $(window).width()});
-      this.$details.append($el);
+      this.$details.empty().append($el);
       $el.animate({'margin-left': 0});
     },
     
@@ -65,23 +66,27 @@
     className: 'person',
 
     events: {
-      'click': 'selectPerson'
+      'click': 'select'
+    },
+
+    select: function(e) {
+      if ($(e.target).not('a').length) {
+        e.preventDefault();
+        this.model.set({'selected': true})
+      }
     },
 
     selectedChanged: function(model, selected) {
       if (selected) {
         this.$el.addClass('selected')
+        this.selectPerson()
       } else {
         this.$el.removeClass('selected')
       }
     },
 
     selectPerson: function(e) {
-      if ($(e.target).not('a').length) {
-        e.preventDefault();
-        this.model.set({'selected': true})
-        window.app.set({'person': this.model});
-      }
+      window.app.set({'person': this.model});
     },
     
     render: function() {
@@ -115,7 +120,7 @@
 
   Slider = Backbone.Model.extend({
     initialize: function(options) {
-      this.people = new People(_.shuffle(people));
+      this.people = options.people;
     }
   });
   
@@ -145,5 +150,6 @@
   window.app = new App();
   window.appView = new AppView({model: app, el: $('.container')});
   window.appView.render();
-  window.app.set({'person': window.app.slider.people.at(0)});
+  window.app.people.at(0).set({'selected': true})
+  // window.app.set({'person': window.app.slider.people.at(0)});
 })();

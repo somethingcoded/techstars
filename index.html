@@ -65,7 +65,7 @@
       <div class="details">
         <div class="position"><%= position %></div>
         <div class="name"><%= name %></div>
-        <div class="contact email"><%= email %></div>
+        <div class="contact email"><a href="mailto:<%= email %>"><%= email %></a></div>
         <div class="contact twitter"><a href="<%= twitter %>">@<%= twitter.match(/[^\/]*$/)[0] %></a></div>
         <div class="contact phone"><%= phone %></div>
       </div>
