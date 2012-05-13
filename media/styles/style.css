@@ -35,6 +35,6 @@ a { color: rgba(117, 156, 176, 1.0) }
 .person .contact.twitter { background: transparent url(../images/contact-twitter.png) 0 2px no-repeat; }
 .person .contact.phone { background: transparent url(../images/contact-phone-2.png) 0 2px no-repeat; }
 
-.details { margin-top: 40px; }
+.details { margin-top: 40px; min-height: 500px; }
 .details .avatar { float: left; }
 .details .person { width: 800px; }

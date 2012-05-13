@@ -68,8 +68,10 @@
     },
 
     selectPerson: function(e) {
-      e.preventDefault();
-      window.app.set({'person': this.model});
+      if ($(e.target).not('a').length) {
+        e.preventDefault();
+        window.app.set({'person': this.model});
+      }
     },
     
     render: function() {
