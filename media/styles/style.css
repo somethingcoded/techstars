@@ -1,7 +1,9 @@
+body { color: #444; }
+
 .header { height: 100px; padding: 20px 40px; background: transparent url(../images/stripes.png) 0 0 repeat-x; position: relative; }
 .header h1 { color: #444; font-size: 60px; position: absolute; left: 211px; top: 49px; }
 .slider {
-    overflow-x: scroll; width: 100%; background: transparent url(../images/mountain3.png) 50% -80px no-repeat;
+    overflow-x: scroll; width: 100%; background: transparent url(../images/mountain3a-wide.png) 0 -80px repeat-x;
             box-shadow: inset 0px 0px 5px rgba(0,0,0,.6);
        -moz-box-shadow: inset 0px 0px 5px rgba(0,0,0,.6);
     -webkit-box-shadow: inset 0px 0px 5px rgba(0,0,0,.6);
@@ -10,7 +12,7 @@
 .slider .person { cursor: pointer;}
 
 .person {
-    float: left; width: 300px; margin: 40px 40px 40px 0; padding: 20px;
+    float: left; width: 300px; height: 200px; margin: 40px 40px 40px 0; padding: 20px;
             border-radius: 3px;
        -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -22,7 +24,13 @@
     -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,.3);
 
 }
-.person .avatar { width: 120px; }
+.person .avatar { float: left; margin-right: 20px; }
+.person .position { font-size: 11px; color: rgba(0,187,65,.8); text-transform: uppercase; }
+.person .name { font-size: 24px; font-weight: bold; position: relative; top: -4px;}
+.person .contact { padding-left: 26px; }
+.person .contact.email { background: transparent url(../images/contact-email-dark.png) 0 0 no-repeat; }
+.person .contact.twitter { background: transparent url(../images/contact-twitter.png) 0 0 no-repeat; }
+.person .contact.phone { background: transparent url(../images/contact-phone.png) 0 0 no-repeat; }
 
 .details { margin-top: 40px; }
 .details .avatar { float: left; }
