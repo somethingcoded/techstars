@@ -62,7 +62,7 @@
     
 	<script type="text/html" class="person-template">
       <img class="avatar" src="<%= img %>" alt="<%= name %>'s image" />
-      <div class="details">
+      <div class="info">
         <div class="position"><%= position %></div>
         <div class="name"><%= name %></div>
         <div class="contact email"><a href="mailto:<%= email %>"><%= email %></a></div>
@@ -81,10 +81,11 @@
     </script>
     
 	<script type="text/html" class="person-detail-template">
-      <img class="avatar" src="<%= img %>" alt="<%= name %>'s image" />
-      <div class="name"><%= name %></div>
-      <div class="bio"><%= bio %></div>
-      <% if (skills.length) { %>
+      <img class="avatar" src="<%= imglarge %>" alt="<%= name %>'s image" />
+      <div class="details-body">
+        <div class="name"><h3><%= name %></h3></div>
+        <div class="bio"><%= bio %></div>
+        <% if (skills.length) { %>
         <div class="skills">
           <h3>Skills</h3>
           <ul>
@@ -93,19 +94,18 @@
             <% }); %>
           </ul>
         </div>
-      <% } %>
-      <div class="contact">
+        <% } %>
+        <div>
         <h3>Contact</h3>
-        <ul>
-          <li>twitter: <a href="<%= twitter %>">@<%= twitter.match(/[^\/]*$/)[0] %></a></li>
+          <div class="contact twitter">twitter: <a href="<%= twitter %>">@<%= twitter.match(/[^\/]*$/)[0] %></a></div>
           <% if (homepage) { %>
-            <li>homepage: <a href="http://<%= homepage %>"><%= homepage %></a></li>
+            <div class="contact homepage">homepage: <a href="http://<%= homepage %>"><%= homepage %></a></div>
           <% } %>
-          <li>email: <a href="mailto:<%= email %>"><%= email %></a></li>
+          <div class="contact email">email: <a href="mailto:<%= email %>"><%= email %></a></div>
           <% if (phone) { %>
-            <li>phone: <%= phone %></li>
+            <div class="contact phone">phone: <%= phone %></div>
           <% } %>
-        </ul>
+        </div>
       </div>
     </script>
     

@@ -1,6 +1,8 @@
 body { color: #444; }
 
-a { color: rgba(117, 156, 176, 1.0) }
+a { color: rgba(117, 156, 176, 1.0); }
+
+h3 { margin-bottom: 5px; }
 
 .header { height: 100px; padding: 20px 40px; background: transparent url(../images/stripes.png) 0 0 repeat-x; position: relative; }
 .header h1 { color: #444; font-size: 60px; position: absolute; left: 211px; top: 49px; }
@@ -28,17 +30,19 @@ a { color: rgba(117, 156, 176, 1.0) }
 
 }
 
+/* rules with more detailed selectors just need extra specifity so they don't screw with the lower detail area */
 .slider .person.selected { opacity: 1; cursor: default; }
 .person .avatar { float: left; margin-right: 20px; }
-.person .details { float: left; margin-top: 0; width: 260px; min-height: 0; }
+.person .info { float: left; margin-top: 0; width: 260px; min-height: 0; }
 .person .position { font-size: 11px; color: rgba(0,187,65,.8); text-transform: uppercase; }
 .person .name { font-size: 24px; font-weight: bold; position: relative; top: -6px;}
-.person .contact { padding-left: 26px; margin-bottom: 5px; }
-.person .contact.email { background: transparent url(../images/contact-email.png) 0 2px no-repeat; }
-.person .contact.twitter { background: transparent url(../images/contact-twitter.png) 0 2px no-repeat; }
-.person .contact.phone { background: transparent url(../images/contact-phone-2.png) 0 2px no-repeat; }
-.person .skills { clear: both; padding: 20px 0 0 0; }
-.person .skills ul { list-style: none; list-style-type: none; margin: 0; padding: 0; }
+.contact { padding-left: 26px; margin-bottom: 5px; }
+.contact.email { background: transparent url(../images/contact-email.png) 0 2px no-repeat; }
+.contact.twitter { background: transparent url(../images/contact-twitter.png) 0 2px no-repeat; }
+.contact.phone { background: transparent url(../images/contact-phone-2.png) 0 2px no-repeat; }
+.contact.homepage { background: transparent url(../images/contact-homepage.png) 0 2px no-repeat; }
+.slider .person .skills { clear: both; padding: 20px 0 0 0; }
+.person .skills ul { list-style: none; list-style-type: none; margin: 0; padding: 0; overflow: hidden; width: 100%; }
 .person .skills ul li {
     float: left; color: #fff; background: rgba(0, 187, 65, 1.0); padding: 3px 6px; margin: 0 5px 10px 0;
             border-radius: 3px;
@@ -46,6 +50,7 @@ a { color: rgba(117, 156, 176, 1.0) }
     -webkit-border-radius: 3px;
 }
 
-.details { margin-top: 40px; min-height: 500px; }
+.details { margin: 40px; min-height: 500px; }
 .details .avatar { float: left; }
-.details .person { width: 800px; }
+.details .details-body { float: left; width: 580px; }
+.details .person { width: 800px; overflow: hidden; padding-bottom: 40px; }
