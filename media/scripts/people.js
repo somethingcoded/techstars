@@ -1,12 +1,13 @@
 var people = [
   {
     'name': 'Josh Nielsen',
-    'bio': 'Some bio here',
+    'bio': "I'm From Texas but have lived all over The West.  I got the startup bug during college and took a job at a startup in Santa Monica called Mahalo.  I worked there for a year and a half as Lead Front-end Developer and then decided to take the next step in my career by moving to Boulder and getting involved with Techstars.  I'm here to help wherever I can.",
     'img': 'media/styles/images/josh.jpg',
-    'skills': ['coding', 'architecture', 'UI'],
+    'skills': ['Javascript', 'Backbone.js', 'Node.js', 'Python'],
     'twitter': 'http://twitter.com/joshontheweb',
     'email': 'josh@joshontheweb.com',
-    'phone': '(310) 663-2648'
+    'phone': '(310) 663-2648',
+    'homepage': 'joshontheweb.com'
   },
   {
     'name': 'Travis Sisti',

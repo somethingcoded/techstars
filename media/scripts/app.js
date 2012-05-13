@@ -100,7 +100,7 @@
 
   Slider = Backbone.Model.extend({
     initialize: function(options) {
-      this.people = new People(people);
+      this.people = new People(_.shuffle(people));
     }
   });
   
