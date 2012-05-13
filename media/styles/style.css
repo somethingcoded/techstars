@@ -1,21 +1,29 @@
-.header { height: 100px; padding: 20px; background: transparent url(../images/stripes.png) 0 0 repeat-x; }
+.header { height: 100px; padding: 20px 40px; background: transparent url(../images/stripes.png) 0 0 repeat-x; position: relative; }
+.header h1 { color: #444; font-size: 60px; position: absolute; left: 211px; top: 49px; }
 .slider {
-    overflow-x: scroll; width: 100%; background: transparent url(../images/mountain3.png) 0 0 no-repeat;
+    overflow-x: scroll; width: 100%; background: transparent url(../images/mountain3.png) 50% -80px no-repeat;
             box-shadow: inset 0px 0px 5px rgba(0,0,0,.6);
-       -moz-box-shadow: inset 0px 0px 3px rgba(0,0,0,.6);
-    -webkit-box-shadow: inset 0px 0px 3px rgba(0,0,0,.6);
+       -moz-box-shadow: inset 0px 0px 5px rgba(0,0,0,.6);
+    -webkit-box-shadow: inset 0px 0px 5px rgba(0,0,0,.6);
 }
-.slider-inner { width: 0; overflow: hidden; }
+.slider-inner { width: 0; overflow: hidden; margin: 0 40px; }
 .slider .person { cursor: pointer;}
 
 .person {
-    float: left; width: 300px; margin: 45px 30px 45px 0; padding: 20px; background: #fff;
+    float: left; width: 300px; margin: 40px 40px 40px 0; padding: 20px;
             border-radius: 3px;
        -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
+    background: #fff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fefefe));
+    background: -moz-linear-gradient(top,  #fff,  #fefefe);
+            box-shadow: 0px 0px 3px rgba(0,0,0,.3);
+       -moz-box-shadow: 0px 0px 3px rgba(0,0,0,.3);
+    -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,.3);
 
 }
 .person .avatar { width: 120px; }
 
+.details { margin-top: 40px; }
 .details .avatar { float: left; }
 .details .person { display: none; }
