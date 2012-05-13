@@ -84,6 +84,7 @@
   
   PersonDetailView = Backbone.View.extend({
     template: _.template($('.person-detail-template').html()),
+    className: 'person',
     
     remove: function(callback) {
       var view = this;
