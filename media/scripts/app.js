@@ -45,12 +45,13 @@
 
   Person = Backbone.Model.extend({
     defaults: {
-      'name': 'Josh Nielsen',
-      'bio': 'Some bio here',
-      'img': 'media/styles/images/josh.jpg',
-      'skills': ['coding', 'architecture', 'UI'],
-      'twitter': 'http://twitter.com/joshontheweb',
-      'email': 'josh@joshontheweb.com'
+      'name': null,
+      'bio': null,
+      'img': null,
+      'skills': [],
+      'twitter': null,
+      'email': null,
+      'homepage': null
     }
   });
 

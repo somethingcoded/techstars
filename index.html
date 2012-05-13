@@ -59,19 +59,40 @@
       <div class="slider"></div>
       <div class="details"></div>
     </script>
+    
 	<script type="text/html" class="person-template">
       <img class="avatar" src="<%= img %>" alt="<%= name %>'s image" />
     </script>
+    
 	<script type="text/html" class="person-detail-template">
       <img class="avatar" src="<%= img %>" alt="<%= name %>'s image" />
       <div class="name"><%= name %></div>
       <div class="bio"><%= bio %></div>
-      <ul class="skills">
-        <% _.each(skills, function(skill) { %>
-          <li><%= skill %></li>
-        <% }); %>
-      </ul>
+      <% if (skills.length) { %>
+        <div class="skills">
+          <h3>Skills</h3>
+          <ul>
+            <% _.each(skills, function(skill) { %>
+              <li><%= skill %></li>
+            <% }); %>
+          </ul>
+        </div>
+      <% } %>
+      <div class="contact">
+        <h3>Contact</h3>
+        <ul>
+          <li>twitter: <a href="<%= twitter %>">@<%= twitter.match(/[^\/]*$/)[0] %></a></li>
+          <% if (homepage) { %>
+            <li>homepage: <a href="http://<%= homepage %>"><%= homepage %></a></li>
+          <% } %>
+          <li>email: <a href="mailto:<%= email %>"><%= email %></a></li>
+          <% if (phone) { %>
+            <li>phone: <%= phone %></li>
+          <% } %>
+        </ul>
+      </div>
     </script>
+    
 	<script type="text/html" class="slider-template">
       <div class="slider-inner"></div>
     </script>
