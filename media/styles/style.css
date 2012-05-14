@@ -1,5 +1,7 @@
 body { color: #444; }
 
+.container { min-width: 600px; }
+
 a { color: rgba(117, 156, 176, 1.0); }
 
 h3 { margin-bottom: 5px; }
