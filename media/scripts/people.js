@@ -28,8 +28,8 @@ var people = [
     'img': 'media/styles/images/travis-small.png',
     'imglarge': 'media/styles/images/travis.png',
     'skills': ['UI Design', 'UX', 'XHTML/CSS', 'JS'],
-    'twitter': 'http://twitter.com/joshontheweb',
-    'email': 'josh@joshontheweb.com',
+    'twitter': 'http://twitter.com/travhimself',
+    'email': 'tsisti@gmail.com',
     'homepage': 'travhimself.com',
     'phone': '(518) 744-6367',
     'position': 'HackStar'
